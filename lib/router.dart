@@ -17,39 +17,39 @@ import 'ui/screens/welcome_screen.dart';
 final GoRouter router = GoRouter(
   initialLocation: '/welcome',
   routes: <RouteBase>[
-    // GoRoute(
-    //   path: '/welcome',
-    //   builder: (BuildContext context, GoRouterState state) {
-    //     return const WelcomeScreen();
-    //   },
-    // ),
-    // GoRoute(
-    //   path: '/register',
-    //   builder: (BuildContext context, GoRouterState state) {
-    //     return const RegisterScreen();
-    //   },
-    // ),
-    // GoRoute(
-    //   path: '/home',
-    //   builder: (BuildContext context, GoRouterState state) {
-    //     return const HomeScreen();
-    //   },
-    // ),
-    // GoRoute(
-    //   path: '/disciplines',
-    //   builder: (BuildContext context, GoRouterState state) {
-    //     return const DisciplinesScreen();
-    //   },
-    //   routes: <RouteBase>[
-    //     GoRoute(
-    //       path: ':id',
-    //       builder: (BuildContext context, GoRouterState state) {
-    //         final id = state.pathParameters['id']!;
-    //         return DisciplineDetailScreen(disciplineId: id);
-    //       },
-    //     ),
-    //   ],
-    // ),
+    GoRoute(
+      path: '/welcome',
+      builder: (BuildContext context, GoRouterState state) {
+        return const WelcomeScreen();
+      },
+    ),
+    GoRoute(
+      path: '/register',
+      builder: (BuildContext context, GoRouterState state) {
+        return const RegisterScreen();
+      },
+    ),
+    GoRoute(
+      path: '/home',
+      builder: (BuildContext context, GoRouterState state) {
+        return const HomeScreen();
+      },
+    ),
+    GoRoute(
+      path: '/disciplines',
+      builder: (BuildContext context, GoRouterState state) {
+        return const DisciplinesScreen();
+      },
+      routes: <RouteBase>[
+        GoRoute(
+          path: ':id',
+          builder: (BuildContext context, GoRouterState state) {
+            final id = state.pathParameters['id']!;
+            return DisciplineDetailScreen(disciplineId: id);
+          },
+        ),
+      ],
+    ),
     GoRoute(
       path: '/add_discipline',
       builder: (BuildContext context, GoRouterState state) {
