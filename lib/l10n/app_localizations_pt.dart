@@ -57,6 +57,9 @@ class AppLocalizationsPt extends AppLocalizations {
   String get aulasDoDia => 'Aulas do dia';
 
   @override
+  String get messageOfTheDay => 'Mensagem do dia:';
+
+  @override
   String get footerHome => 'Home';
 
   @override

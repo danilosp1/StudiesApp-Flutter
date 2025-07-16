@@ -188,6 +188,12 @@ abstract class AppLocalizations {
   /// **'Aulas do dia'**
   String get aulasDoDia;
 
+  /// No description provided for @messageOfTheDay.
+  ///
+  /// In pt, this message translates to:
+  /// **'Mensagem do dia:'**
+  String get messageOfTheDay;
+
   /// No description provided for @footerHome.
   ///
   /// In pt, this message translates to:

@@ -57,6 +57,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get aulasDoDia => 'Today\'s Classes';
 
   @override
+  String get messageOfTheDay => 'Message of the day:';
+
+  @override
   String get footerHome => 'Home';
 
   @override

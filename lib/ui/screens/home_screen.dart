@@ -14,6 +14,7 @@ class HomeScreen extends StatelessWidget {
     final l10n = AppLocalizations.of(context)!;
     final username = context.watch<UserAuthRepository>().currentUsername ?? 'Usuário';
     final currentDateFormatted = DateFormat('dd/MM', 'pt_BR').format(DateTime.now());
+    final message = context.watch<DisciplineViewModel>().messageOfTheDay?.title;
 
     return Scaffold(
       body: SafeArea(
@@ -27,6 +28,13 @@ class HomeScreen extends StatelessWidget {
                 l10n.olaInicio(username),
                 style: const TextStyle(fontSize: 28),
               ),
+              if (message != null) ...[
+                const SizedBox(height: 10),
+                Text(
+                  '${l10n.messageOfTheDay} $message',
+                  style: const TextStyle(fontSize: 16, fontStyle: FontStyle.italic),
+                ),
+              ],
               const SizedBox(height: 7),
               const Divider(thickness: 1),
               const SizedBox(height: 30),

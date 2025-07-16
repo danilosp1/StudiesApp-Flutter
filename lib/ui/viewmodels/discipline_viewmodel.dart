@@ -3,6 +3,7 @@ import '../../data/models/discipline_entity.dart';
 import '../../data/models/material_link_entity.dart';
 import '../../data/models/subject_schedule_entity.dart';
 import '../../data/models/task_entity.dart';
+import '../../data/remote/models/motd_response.dart';
 import '../../data/repository/app_repository.dart';
 import 'package:intl/intl.dart';
 
@@ -20,9 +21,11 @@ class DisciplineViewModel extends ChangeNotifier {
   List<DisciplineEntity> disciplines = [];
   Map<int, List<SubjectScheduleEntity>> _schedules = {};
 
+  MotdResponse? messageOfTheDay;
+
   bool isLoading = true;
   String? errorMessage;
-  
+
   DisciplineEntity? selectedDiscipline;
   List<SubjectScheduleEntity> selectedSchedules = [];
   List<TaskEntity> selectedTasks = [];
@@ -30,6 +33,14 @@ class DisciplineViewModel extends ChangeNotifier {
 
   DisciplineViewModel(this._repository) {
     _loadAllDisciplinesAndSchedules();
+    _loadMessageOfTheDay();
+  }
+
+  void _loadMessageOfTheDay() {
+    _repository.getMessageOfTheDay().listen((motd) {
+      messageOfTheDay = motd;
+      notifyListeners();
+    });
   }
 
   void _loadAllDisciplinesAndSchedules() {
@@ -48,7 +59,7 @@ class DisciplineViewModel extends ChangeNotifier {
       notifyListeners();
       return;
     }
-    
+
     int loadedCount = 0;
     _schedules.clear();
     for (var discipline in disciplines) {
@@ -62,7 +73,7 @@ class DisciplineViewModel extends ChangeNotifier {
       });
     }
   }
-  
+
   Future<void> addDiscipline(DisciplineEntity discipline, List<SubjectScheduleEntity> schedules) async {
     await _repository.insertDisciplineWithSchedules(discipline, schedules);
   }

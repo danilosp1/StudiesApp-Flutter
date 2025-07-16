@@ -22,6 +22,7 @@
         }
     },
     "aulasDoDia": "Today's Classes",
+    "messageOfTheDay": "Message of the day:",
     "footerHome": "Home",
     "footerTasks": "Tasks",
     "footerDisciplines": "Subjects",
