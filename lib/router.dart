@@ -86,20 +86,20 @@ final GoRouter router = GoRouter(
     ),
   ],
 
-  // redirect: (BuildContext context, GoRouterState state) {
-  //   final authRepository = context.read<UserAuthRepository>();
-  //   final isLoggedIn = authRepository.currentUsername != null;
-  //
-  //   final loggingIn = state.matchedLocation == '/welcome' || state.matchedLocation == '/register';
-  //
-  //   if (!isLoggedIn && !loggingIn) {
-  //     return '/welcome';
-  //   }
-  //
-  //   if (isLoggedIn && loggingIn) {
-  //     return '/home';
-  //   }
-  //
-  //   return null;
-  // },
+  redirect: (BuildContext context, GoRouterState state) {
+    final authRepository = context.read<UserAuthRepository>();
+    final isLoggedIn = authRepository.currentUsername != null;
+  
+    final loggingIn = state.matchedLocation == '/welcome' || state.matchedLocation == '/register';
+  
+    if (!isLoggedIn && !loggingIn) {
+      return '/welcome';
+    }
+  
+    if (isLoggedIn && loggingIn) {
+      return '/home';
+    }
+  
+    return null;
+  },
 );
