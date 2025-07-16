@@ -61,23 +61,23 @@ final GoRouter router = GoRouter(
       builder: (BuildContext context, GoRouterState state) {
         return const TasksScreen();
       },
-      // routes: <RouteBase>[
-      //   GoRoute(
-      //     path: ':id',
-      //     builder: (BuildContext context, GoRouterState state) {
-      //       final id = state.pathParameters['id']!;
-      //       return TaskDetailScreen(taskId: id);
-      //     },
-      //   ),
-      // ],
+      routes: <RouteBase>[
+        GoRoute(
+          path: ':id',
+          builder: (BuildContext context, GoRouterState state) {
+            final id = state.pathParameters['id']!;
+            return TaskDetailScreen(taskId: id);
+          },
+        ),
+      ],
     ),
-    // GoRoute(
-    //   path: '/add_task',
-    //   builder: (BuildContext context, GoRouterState state) {
-    //     final disciplineId = state.uri.queryParameters['disciplineId'];
-    //     return AddTaskScreen(disciplineId: disciplineId);
-    //   },
-    // ),
+    GoRoute(
+      path: '/add_task',
+      builder: (BuildContext context, GoRouterState state) {
+        final disciplineId = state.uri.queryParameters['disciplineId'];
+        return AddTaskScreen(disciplineId: disciplineId);
+      },
+     ),
     // GoRoute(
     //   path: '/settings',
     //   builder: (BuildContext context, GoRouterState state) {
