@@ -30,7 +30,8 @@ void main() async {
       providers: [
         Provider(create: (_) => authRepository),
         ChangeNotifierProvider(create: (_) => DisciplineViewModel(repository)),
-        ChangeNotifierProvider(create: (_) => TaskViewModel(repository))
+        ChangeNotifierProvider(create: (_) => TaskViewModel(repository)),
+        ChangeNotifierProvider(create: (_) => LocaleViewModel()),
       ],
       child: const MyApp(),
     ),
@@ -42,12 +43,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final locale = context.watch<LocaleViewModel>().appLocale;
 
     return MaterialApp.router(
       title: 'Studies App',
       theme: appTheme,
       routerConfig: router,
 
+      locale: locale,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
       debugShowCheckedModeBanner: false,

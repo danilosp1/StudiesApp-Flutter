@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:studies_app_flutter/l10n/app_localizations.dart';
 
 class Footer extends StatelessWidget {
   final String currentRouteName;
@@ -8,30 +9,31 @@ class Footer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return BottomNavigationBar(
       currentIndex: _calculateSelectedIndex(context),
       onTap: (index) => _onItemTapped(index, context),
       type: BottomNavigationBarType.fixed,
-      items: const [
+      items: [
         BottomNavigationBarItem(
-          icon: Icon(Icons.home_outlined),
-          activeIcon: Icon(Icons.home),
-          label: 'Home',
+          icon: const Icon(Icons.home_outlined),
+          activeIcon: const Icon(Icons.home),
+          label: l10n.footerHome,
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.list_alt_outlined),
-          activeIcon: Icon(Icons.list_alt),
-          label: 'Tarefas',
+          icon: const Icon(Icons.list_alt_outlined),
+          activeIcon: const Icon(Icons.list_alt),
+          label: l10n.footerTasks,
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.school_outlined),
-          activeIcon: Icon(Icons.school),
-          label: 'Disciplinas',
+          icon: const Icon(Icons.school_outlined),
+          activeIcon: const Icon(Icons.school),
+          label: l10n.footerDisciplines,
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.settings_outlined),
-          activeIcon: Icon(Icons.settings),
-          label: 'Ajustes',
+          icon: const Icon(Icons.settings_outlined),
+          activeIcon: const Icon(Icons.settings),
+          label: l10n.footerSettings,
         ),
       ],
     );

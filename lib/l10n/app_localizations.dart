@@ -188,10 +188,34 @@ abstract class AppLocalizations {
   /// **'Aulas do dia'**
   String get aulasDoDia;
 
+  /// No description provided for @footerHome.
+  ///
+  /// In pt, this message translates to:
+  /// **'Home'**
+  String get footerHome;
+
+  /// No description provided for @footerTasks.
+  ///
+  /// In pt, this message translates to:
+  /// **'Tarefas'**
+  String get footerTasks;
+
+  /// No description provided for @footerDisciplines.
+  ///
+  /// In pt, this message translates to:
+  /// **'Disciplinas'**
+  String get footerDisciplines;
+
+  /// No description provided for @footerSettings.
+  ///
+  /// In pt, this message translates to:
+  /// **'Ajustes'**
+  String get footerSettings;
+
   /// No description provided for @disciplinasTitulo.
   ///
   /// In pt, this message translates to:
-  /// **'Suas Disciplinas'**
+  /// **'Minhas Disciplinas'**
   String get disciplinasTitulo;
 
   /// No description provided for @voltar.

@@ -22,7 +22,11 @@
         }
     },
     "aulasDoDia": "Today's Classes",
-    "disciplinasTitulo": "Your Disciplines",
+    "footerHome": "Home",
+    "footerTasks": "Tasks",
+    "footerDisciplines": "Subjects",
+    "footerSettings": "Settings",
+    "disciplinasTitulo": "My Subjects",
     "voltar": "Back",
     "materiaisLabel": "Materials",
     "semMateriaisCadastrados": "No materials registered.",

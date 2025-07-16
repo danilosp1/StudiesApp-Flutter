@@ -22,7 +22,11 @@
         }
     },
     "aulasDoDia": "Aulas do dia",
-    "disciplinasTitulo": "Suas Disciplinas",
+    "footerHome": "Home",
+    "footerTasks": "Tarefas",
+    "footerDisciplines": "Disciplinas",
+    "footerSettings": "Ajustes",
+    "disciplinasTitulo": "Minhas Disciplinas",
     "voltar": "Voltar",
     "materiaisLabel": "Materiais",
     "semMateriaisCadastrados": "Nenhum material cadastrado.",

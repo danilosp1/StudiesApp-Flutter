@@ -57,7 +57,19 @@ class AppLocalizationsPt extends AppLocalizations {
   String get aulasDoDia => 'Aulas do dia';
 
   @override
-  String get disciplinasTitulo => 'Suas Disciplinas';
+  String get footerHome => 'Home';
+
+  @override
+  String get footerTasks => 'Tarefas';
+
+  @override
+  String get footerDisciplines => 'Disciplinas';
+
+  @override
+  String get footerSettings => 'Ajustes';
+
+  @override
+  String get disciplinasTitulo => 'Minhas Disciplinas';
 
   @override
   String get voltar => 'Voltar';

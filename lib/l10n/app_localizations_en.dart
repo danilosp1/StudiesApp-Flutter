@@ -57,7 +57,19 @@ class AppLocalizationsEn extends AppLocalizations {
   String get aulasDoDia => 'Today\'s Classes';
 
   @override
-  String get disciplinasTitulo => 'Your Disciplines';
+  String get footerHome => 'Home';
+
+  @override
+  String get footerTasks => 'Tasks';
+
+  @override
+  String get footerDisciplines => 'Subjects';
+
+  @override
+  String get footerSettings => 'Settings';
+
+  @override
+  String get disciplinasTitulo => 'My Subjects';
 
   @override
   String get voltar => 'Back';
