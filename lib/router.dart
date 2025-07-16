@@ -78,12 +78,12 @@ final GoRouter router = GoRouter(
         return AddTaskScreen(disciplineId: disciplineId);
       },
      ),
-    // GoRoute(
-    //   path: '/settings',
-    //   builder: (BuildContext context, GoRouterState state) {
-    //     return const SettingsScreen();
-    //   },
-    // ),
+    GoRoute(
+      path: '/settings',
+      builder: (BuildContext context, GoRouterState state) {
+        return const SettingsScreen();
+      },
+    ),
   ],
 
   // redirect: (BuildContext context, GoRouterState state) {
