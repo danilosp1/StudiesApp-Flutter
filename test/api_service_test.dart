@@ -21,10 +21,8 @@ void main() {
 
     test('getMessageOfTheDay returns MotdResponse on success', () async {
       final responseData = {
-        'userId': 1,
         'id': 1,
-        'title': 'Test MOTD',
-        'completed': false
+        'title': 'Test MOTD'
       };
       final response = Response(
         data: responseData,
