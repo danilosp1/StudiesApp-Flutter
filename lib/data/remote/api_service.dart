@@ -2,7 +2,7 @@ import 'package:dio/dio.dart';
 import 'models/motd_response.dart';
 
 class ApiService {
-  static const String _baseUrl = "https://jsonplaceholder.typicode.com/";
+  static const String _baseUrl = "https://jsonplaceholder.org/";
   final Dio _dio;
 
   factory ApiService({Dio? dio}) {
@@ -22,7 +22,7 @@ class ApiService {
 
   Future<MotdResponse> getMessageOfTheDay() async {
     try {
-      final response = await _dio.get('todos/1');
+      final response = await _dio.get('posts/1');
       return MotdResponse.fromJson(response.data);
     } on DioException catch (e) {
       throw Exception('Falha ao carregar a mensagem do dia: ${e.message}');
